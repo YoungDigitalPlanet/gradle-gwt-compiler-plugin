@@ -1,0 +1,10 @@
+jdk:
+  - oraclejdk8
+script:
+  ./gradlew build
+deploy:
+  provider: script
+  script: "./gradlew build bintrayUpload -PbintrayUser=$BINTRAY_USER -PbintrayApiKey=$BINTRAY_API_KEY -Pversion=$TRAVIS_TAG"
+  skip_cleanup: true
+  on:
+    tags: true
