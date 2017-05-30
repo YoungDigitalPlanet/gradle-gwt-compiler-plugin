@@ -36,7 +36,7 @@ publishing {
     publications {
         BintrayPublication(MavenPublication) {
             from components.java
-            groupId group
+            groupId 'eu.ydp'
             artifactId 'gradle-gwt-compiler-plugin'
             version version
         }
